@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --troh-dark: #1a1a2e;
+  --troh-primary: #16213e;
+  --troh-accent: #0f3460;
+  --troh-gold: #e94560;
+  --troh-light: #f5f5f5;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--troh-gold);
+  color: white;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--troh-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--troh-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--troh-gold);
+}
+
+/* Portable Text styles */
+.portable-text p {
+  @apply mb-4 leading-relaxed text-gray-700;
+}
+
+.portable-text h2 {
+  @apply text-2xl font-bold text-troh-dark mt-8 mb-4;
+}
+
+.portable-text h3 {
+  @apply text-xl font-semibold text-troh-dark mt-6 mb-3;
+}
+
+.portable-text ul {
+  @apply list-disc list-inside mb-4 space-y-2;
+}
+
+.portable-text blockquote {
+  @apply border-l-4 border-troh-gold pl-4 italic my-6 text-gray-600;
+}
