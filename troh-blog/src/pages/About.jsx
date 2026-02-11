@@ -5,12 +5,14 @@ function About() {
   return (
     <div className="pt-16">
       {/* Hero */}
-      <section className="bg-troh-dark py-24">
+      <section className="bg-gradient-to-br from-white via-orange-50 to-green-50 py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">Tayloring Rays of Hope</h1>
-          <blockquote className="text-xl md:text-2xl text-gray-300 italic mb-8">
+          <h1 className="text-4xl md:text-5xl font-bold text-troh-dark mb-4">Tayloring Rays of Hope</h1>
+          <p className="text-troh-primary text-lg mb-2 font-semibold">501(c)(3) Nonprofit Organization</p>
+          <p className="text-gray-500 text-sm mb-6">Founded by Elaine Taylor • EIN Available Upon Request</p>
+          <blockquote className="text-xl md:text-2xl text-gray-600 italic mb-8">
             "Hope is being able to see that there is light despite all of the darkness."
-            <footer className="text-troh-gold mt-2 not-italic">— Desmond Tutu</footer>
+            <footer className="text-troh-primary mt-2 not-italic font-semibold">— Desmond Tutu</footer>
           </blockquote>
         </div>
       </section>
@@ -18,7 +20,7 @@ function About() {
       {/* Elaine's Story */}
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <span className="text-troh-gold font-semibold text-sm uppercase tracking-wider">Founder's Story</span>
+          <span className="text-troh-primary font-semibold text-sm uppercase tracking-wider">Founder's Story</span>
           <h2 className="text-3xl md:text-4xl font-bold text-troh-dark mt-2 mb-8">A Diagnosis Doesn't Have a Time, Place, or Person</h2>
           
           <div className="prose prose-lg max-w-none text-gray-700 space-y-6">
@@ -123,7 +125,7 @@ function About() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">The Birth of Tayloring Rays of Hope</h2>
           
-          <div className="prose prose-lg max-w-none text-gray-300 space-y-6">
+          <div className="prose prose-lg max-w-none text-white/90 space-y-6">
             <p>
               As Taylor continued treatment, she noticed something that troubled her deeply. Other patients were being turned away, not because their cancer was worse, but because they could not afford co-pays, transportation, food or basic necessities.
             </p>
@@ -133,13 +135,13 @@ function About() {
             <p>
               Taylor began paying co-pays out of her own pocket. She slid her debit card across clinic counters to cover costs for others. She drove patients from Rocky Mount and Wilson to Chapel Hill multiple times a week. She gave coats, socks and toiletries to strangers sitting beside her during treatment.
             </p>
-            <p className="text-troh-gold font-semibold text-xl">
+            <p className="font-semibold text-xl">
               "That gave me a feeling like I'd won the lottery."
             </p>
             <p>
               Those moments became the foundation of Tayloring Rays of Hope, which aims to quietly cover costs that would otherwise fall through the cracks for patients.
             </p>
-            <p className="text-white font-semibold italic">
+            <p className="font-semibold italic">
               "I don't want my name anywhere," Taylor said. "Just tell them it was Rays of Hope."
             </p>
           </div>
@@ -190,21 +192,21 @@ function About() {
       </section>
 
       {/* Mission Statement */}
-      <section className="py-24 bg-troh-gold text-white">
+      <section className="py-24 bg-gradient-to-br from-troh-secondary/30 to-troh-primary/10">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Sun className="w-16 h-16 mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-8">Our Mission</h2>
-          <p className="text-xl md:text-2xl leading-relaxed">
-            Tayloring Rays of Hope LLC is more than a foundation—it's a light in the darkness for those facing life-changing diagnoses. Being thrust into my own diagnoses, I created this space to give back one ray of hope at a time.
+          <Sun className="w-16 h-16 mx-auto mb-6 text-troh-primary" />
+          <h2 className="text-3xl md:text-4xl font-bold text-troh-dark mb-8">Our Mission</h2>
+          <p className="text-xl md:text-2xl leading-relaxed text-gray-700">
+            Tayloring Rays of Hope is more than a foundation—it's a light in the darkness for those facing life-changing diagnoses. Being thrust into my own diagnoses, I created this space to give back one ray of hope at a time.
           </p>
-          <p className="text-xl md:text-2xl leading-relaxed mt-6">
+          <p className="text-xl md:text-2xl leading-relaxed mt-6 text-gray-700">
             When your world shifts and everything feels uncertain—know this: sunshine still exists. It may not always be bright, but it's always there. And so am I.
           </p>
-          <p className="text-lg mt-8 opacity-90">
-            Through heartfelt support, spiritual guidance, practical inspiration, and raw clarity, Tayloring Rays of Hope stands as a reminder: <strong>you are never alone.</strong>
+          <p className="text-lg mt-8 text-gray-600">
+            Through heartfelt support, spiritual guidance, practical inspiration, and raw clarity, Tayloring Rays of Hope stands as a reminder: <strong className="text-troh-primary">you are never alone.</strong>
           </p>
           <div className="mt-12">
-            <blockquote className="text-2xl italic">
+            <blockquote className="text-2xl italic text-troh-dark">
               "Even in the face of no cure, there is still courage. You are not your diagnosis—you are strength, light, and the living proof that hope refuses to fade."
             </blockquote>
           </div>

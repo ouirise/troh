@@ -7,6 +7,7 @@ import Category from './pages/Category'
 import About from './pages/About'
 import Colors from './pages/Colors'
 import NotFound from './pages/NotFound'
+import Admin from './pages/Admin'
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
         <Route path="/category/:slug" element={<Category />} />
         <Route path="/about" element={<About />} />
         <Route path="/colors" element={<Colors />} />
+        {/* Admin redirects to static HTML file */}
+        <Route path="/admin" element={<Admin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

@@ -71,20 +71,20 @@ function Colors() {
   return (
     <div className="pt-16">
       {/* Header */}
-      <section className="bg-troh-dark py-24">
+      <section className="bg-gradient-to-br from-white via-orange-50 to-green-50 py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             to="/"
-            className="inline-flex items-center text-white/80 hover:text-white mb-6 transition-colors"
+            className="inline-flex items-center text-gray-600 hover:text-troh-primary mb-6 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back Home
           </Link>
-          <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">The Colors of Cancer</h1>
-          <p className="text-xl text-gray-300">
+          <h1 className="text-4xl md:text-5xl font-bold text-troh-dark mb-6">The Colors of Cancer</h1>
+          <p className="text-xl text-gray-600">
             From Diagnosis Forward
           </p>
-          <p className="text-lg text-gray-400 mt-4">
+          <p className="text-lg text-gray-500 mt-4">
             Each color represents more than a ribbon. It marks the moment of diagnosis—the day life changes, fear enters the room, and a new fight begins.
           </p>
         </div>

@@ -7,11 +7,15 @@ export default {
   theme: {
     extend: {
       colors: {
-        'troh-dark': '#1a1a2e',
-        'troh-primary': '#16213e',
-        'troh-accent': '#0f3460',
-        'troh-gold': '#e94560',
-        'troh-light': '#f5f5f5',
+        // Colors of Battle - Unified Light Theme
+        'troh-primary': '#FF6347',    // Coral - Strength & Hope
+        'troh-secondary': '#90EE90',  // Light Green - Growth & Healing
+        'troh-accent': '#F08080',     // Light Coral - Warmth & Energy
+        'troh-dark': '#333333',       // Dark Gray - Text & Contrast
+        'troh-light': '#FFFFFF',      // White - Clean Background
+        'troh-cream': '#FFF8F5',      // Soft Cream - Alternate Background
+        // Keep gold for CTA consistency
+        'troh-gold': '#FF6347',       // Now same as primary (coral)
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
