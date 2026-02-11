@@ -46,6 +46,7 @@ function Footer() {
               <li><Link to="/colors" className="hover:text-troh-primary transition-colors">Colors of Cancer</Link></li>
               <li><Link to="/blog" className="hover:text-troh-primary transition-colors">Blog</Link></li>
               <li><Link to="/about" className="hover:text-troh-primary transition-colors">About Mrs. Taylor</Link></li>
+              <li><Link to="/admin" className="hover:text-troh-primary transition-colors text-troh-primary font-semibold">Admin Panel</Link></li>
             </ul>
           </div>
 

@@ -1,0 +1,16 @@
+# KV-only configuration
+name = "troh-blog"
+compatibility_date = "2024-02-11"
+compatibility_flags = ["nodejs_compat"]
+
+# Pages build output
+pages_build_output_dir = "dist"
+
+# KV Namespace
+[[kv_namespaces]]
+binding = "BLOG_POSTS"
+id = "12d324c5ae4545789c3b54cbee79a0f7"
+
+[vars]
+NODE_ENV = "production"
+VITE_SHOPIFY_STORE_DOMAIN = "tayloringraysofhopellc.com"

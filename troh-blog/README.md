@@ -1,95 +1,74 @@
-# TroH Blog - Vite + Sanity CMS
-
-Blog platform for Tayloring Rays of Hope. Built with Vite, React, and Sanity CMS.
+# TROH Blog - Quick Start
 
 ## Stack
+- **Frontend:** React + Vite + Tailwind
+- **Backend:** Cloudflare Pages Functions
+- **Database:** Cloudflare KV (simple JSON storage)
+- **Images:** Base64 in KV (<1MB each)
+- **Deploy:** Wrangler CLI
 
-- **Frontend**: Vite + React + React Router
-- **Styling**: Tailwind CSS
-- **CMS**: Sanity.io
-- **Icons**: Lucide React
+## Deploy (3 Steps)
 
-## Setup
+```bash
+# 1. Login to Cloudflare
+wrangler login
 
-1. **Install dependencies**:
-   ```bash
-   cd troh-blog
-   npm install
-   ```
+# 2. Create KV namespace
+pnpm kv:create
+# Copy the ID into wrangler.toml
 
-2. **Environment variables**:
-   ```bash
-   cp .env.example .env.local
-   # Edit .env.local with your Sanity credentials
-   ```
+# 3. Deploy
+pnpm run deploy
 
-3. **Run dev server**:
-   ```bash
-   npm run dev
-   ```
-
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
-
-## Sanity Schema
-
-Required content types:
-
-```javascript
-// post
-{
-  _type: 'post',
-  title: 'string',
-  slug: { current: 'string' },
-  excerpt: 'text',
-  body: 'array', // Portable Text
-  mainImage: 'image',
-  publishedAt: 'datetime',
-  author: { _type: 'reference', to: 'author' },
-  categories: [{ _type: 'reference', to: 'category' }]
-}
-
-// author
-{
-  _type: 'author',
-  name: 'string',
-  image: 'image',
-  bio: 'text'
-}
-
-// category
-{
-  _type: 'category',
-  title: 'string',
-  slug: { current: 'string' },
-  description: 'text'
-}
+# 4. Seed database
+# Visit: https://your-site.com/api/seed
 ```
 
-## Deployment
+## Client Usage
 
-1. **Cloudflare Pages**:
-   - Build command: `npm run build`
-   - Build output: `dist`
-   - Root directory: `troh-blog`
+Go to `https://your-site.com/admin`
 
-2. **Environment variables in CF**:
-   - Add all `VITE_` prefixed env vars
+1. Write post
+2. Drag-drop image
+3. Click "Save Post"
+4. Done!
 
-## Structure
+## File Structure
 
 ```
 troh-blog/
-├── src/
-│   ├── components/     # Reusable components
-│   ├── pages/         # Route pages
-│   ├── lib/           # Sanity client
-│   ├── App.jsx        # Routes
-│   └── main.jsx       # Entry
-├── public/            # Static assets
-└── index.html
+├── functions/api/      # Backend API
+│   ├── posts.js        # List/create posts
+│   ├── posts/[slug].js # Get single post
+│   ├── upload.js       # Image upload
+│   └── seed.js         # Initial data
+├── src/content/        # Local JSON (dev)
+├── src/pages/Admin.jsx # Admin panel
+├── wrangler.toml       # Cloudflare config
+└── DEPLOY_KV.md       # Full deploy guide
 ```
 
-🌫️🌒 67 Protocol Active
+## Commands
+
+```bash
+pnpm dev              # Local dev
+pnpm run deploy       # Deploy to production
+pnpm kv:list          # View all data
+pnpm wrangler:tail    # View live logs
+```
+
+## Features
+
+- ✅ Drag-drop image upload
+- ✅ One-click post publish
+- ✅ Auto-save to KV
+- ✅ Works on all devices
+- ✅ No technical knowledge needed
+
+## Limits (Free Plan)
+
+- 100k reads/day
+- 1k writes/day
+- 1MB max per post+image
+
+Perfect for a blog! 🚀

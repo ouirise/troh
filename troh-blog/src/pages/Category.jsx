@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import { BookOpen, ArrowLeft } from 'lucide-react'
-import { getAllPosts } from '../lib/content'
+import { getAllPosts } from '../lib/content.js'
 
 function Category() {
   const { slug } = useParams()

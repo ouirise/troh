@@ -6,7 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "pnpm run build && wrangler pages deploy dist",
+    
+    "kv:create": "wrangler kv:namespace create BLOG_POSTS",
+    "kv:list": "wrangler kv:key list --binding=BLOG_POSTS",
+    "kv:get": "wrangler kv:key get posts --binding=BLOG_POSTS",
+    "kv:delete": "wrangler kv:key delete posts --binding=BLOG_POSTS",
+    
+    "wrangler:dev": "wrangler pages dev",
+    "wrangler:login": "wrangler login",
+    "wrangler:tail": "wrangler tail"
   },
   "dependencies": {
     "@portabletext/react": "^3.0.11",
@@ -27,6 +37,7 @@
     "autoprefixer": "^10.4.24",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.6",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "wrangler": "^4.64.0"
   }
 }
