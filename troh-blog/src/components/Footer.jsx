@@ -33,7 +33,7 @@ function Footer() {
             <h4 className="text-troh-dark font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3 text-sm">
               <li><Link to="/" className="hover:text-troh-primary transition-colors">Home</Link></li>
-              <li><Link to="/about" className="hover:text-troh-primary transition-colors">My Story</Link></li>
+              <li><Link to="/about" className="hover:text-troh-primary transition-colors">My Journey</Link></li>
               <li><Link to="/about" className="hover:text-troh-primary transition-colors">About</Link></li>
               <li><a href={`https://${import.meta.env.VITE_SHOPIFY_STORE_DOMAIN}`} className="hover:text-troh-primary transition-colors font-semibold text-troh-primary">Shop (Support Our Mission)</a></li>
             </ul>
@@ -62,13 +62,18 @@ function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-200 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} Tayloring Rays of Hope. 501(c)(3) Nonprofit.<br/>
-            <span className="text-xs">Founded by Elaine Taylor • EIN Available Upon Request</span>
-          </p>
-          <div className="flex items-center gap-4 mt-4 md:mt-0">
-            
+        <div className="border-t border-gray-200 pt-8 grid md:grid-cols-2 gap-6 items-start">
+          <div>
+            <p className="text-sm text-gray-500">
+              &copy; {new Date().getFullYear()} Tayloring Rays of Hope. 501(c)(3) Nonprofit.
+            </p>
+            <p className="text-xs text-gray-500 mt-1">Founded by Elaine Taylor • EIN Available Upon Request</p>
+            <p className="text-xs text-troh-primary/60 mt-1">Made with love for Mrs. Taylor 💜</p>
+          </div>
+          <div className="md:text-right">
+            <p className="text-xs text-gray-400">
+              Built with care by <a href="https://ouirise.ai" target="_blank" rel="noopener noreferrer" className="text-troh-primary/70 hover:text-troh-primary transition-colors">Ouirise</a> & <a href="https://www.moonshot.ai" target="_blank" rel="noopener noreferrer" className="text-troh-primary/70 hover:text-troh-primary transition-colors">Moonshot AI</a>
+            </p>
           </div>
         </div>
       </div>

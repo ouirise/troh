@@ -5,7 +5,7 @@ import { Menu, X, ShoppingBag } from 'lucide-react'
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/blog', label: 'Journey' },
-  { to: '/about', label: 'About' },
+  { to: '/about', label: 'About Mrs. Taylor' },
 ]
 
 function Header() {
@@ -64,7 +64,7 @@ function Header() {
               className="ml-2 flex items-center gap-2 px-4 py-2 bg-troh-primary hover:bg-red-500 text-white rounded-md text-sm font-medium transition-all hover:scale-105"
             >
               <ShoppingBag className="w-4 h-4" />
-              Shop
+              Support
             </a>
           </nav>
 

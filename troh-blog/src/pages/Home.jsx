@@ -7,14 +7,12 @@ import ImageCarousel from '../components/ImageCarousel'
 
 function CloudVillage() {
   const [featuredPosts, setFeaturedPosts] = useState([])
-  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     async function loadPosts() {
       const data = await getAllPosts()
       // Get first 3 posts
       setFeaturedPosts(data.slice(0, 3))
-      setLoading(false)
     }
     loadPosts()
   }, [])
@@ -34,17 +32,14 @@ function CloudVillage() {
           <div className="text-center">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-troh-primary/10 backdrop-blur-sm mb-8">
               <Sun className="w-4 h-4 text-troh-primary" />
-              <span className="text-sm text-troh-dark">Sunshine still exists. It may not always be bright, but it's always there.</span>
+              <span className="text-sm text-troh-dark">"Hope is being able to see that there is light despite all of the darkness." — Desmond Tutu</span>
             </div>
             
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-troh-dark mb-6 tracking-tight">
               {siteSettings.title}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 mb-2 max-w-3xl mx-auto">
+            <p className="text-xl md:text-2xl text-gray-600 mb-6 max-w-3xl mx-auto">
               {siteSettings.description}
-            </p>
-            <p className="text-lg text-troh-primary font-semibold mb-4">
-              Founded by Elaine Taylor
             </p>
             <blockquote className="text-lg text-gray-500 mb-10 max-w-2xl mx-auto italic">
               "Even in the face of no cure, there is still courage. You are not your diagnosis—you are strength, light, and the living proof that hope refuses to fade."
@@ -55,7 +50,7 @@ function CloudVillage() {
                 to="/about"
                 className="inline-flex items-center justify-center px-8 py-4 bg-troh-primary hover:bg-red-500 text-white rounded-full font-medium transition-all hover:scale-105 hover:shadow-lg hover:shadow-troh-primary/25"
               >
-                Read My Story
+                Our Story
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Link>
               <Link
@@ -70,17 +65,47 @@ function CloudVillage() {
         </div>
       </section>
 
-      {/* Mission Brief */}
+      {/* Who We Are */}
       <section className="py-24 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Heart className="w-12 h-12 text-troh-primary mx-auto mb-6" />
-          <h2 className="text-3xl md:text-4xl font-bold text-troh-dark mb-6">Our Mission</h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            Founded by <strong>Elaine Taylor</strong>, {siteSettings.title} is a registered 501(c)(3) nonprofit organization dedicated to sharing the journey and providing support for those facing life-changing diagnoses.
-          </p>
-          <p className="text-lg text-gray-500 mt-6">
-            Through our blog and community, we offer hope, clarity, and healing—one ray at a time. Whether you're newly diagnosed, in treatment, or navigating life after it all, our voice is here to echo what you may not be able to say yet: <strong className="text-troh-primary">You've got this.</strong>
-          </p>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div>
+              <span className="text-troh-primary font-semibold text-sm uppercase tracking-wider">Who We Are</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-troh-dark mt-2 mb-6">A Safe Harbor with Strong Walls</h2>
+              <div className="space-y-4 text-gray-700">
+                <p>
+                  Tayloring Rays of Hope is built on a simple promise: <strong>no one fights alone.</strong> We are a community of survivors, caregivers, and allies who understand that a diagnosis changes everything—but it doesn't have to steal your dignity or hope.
+                </p>
+                <p>
+                  Elaine knows what it means to need a ride to chemo, to worry about a co-pay, to sit in a chair and wonder how you'll make it through. She's been there. And now she's here—for anyone who needs someone who <em>gets it</em>.
+                </p>
+                <p>
+                  This is a place to exhale. To be fragile without judgment. But make no mistake—we are also vigilant. We fight bureaucracy, navigate insurance mazes, and stand in the gap when the system fails.
+                </p>
+              </div>
+            </div>
+            <div className="bg-gradient-to-br from-troh-primary/10 to-troh-secondary/20 rounded-2xl p-8">
+              <h3 className="text-xl font-bold text-troh-dark mb-6">How We Help</h3>
+              <ul className="space-y-4 text-gray-700">
+                <li className="flex items-start gap-3">
+                  <span className="text-troh-primary font-bold">→</span>
+                  <span><strong>Transportation:</strong> Getting to treatment shouldn't be a barrier. We drive patients to chemo, radiation, and appointments—no questions asked.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-troh-primary font-bold">→</span>
+                  <span><strong>Financial Support:</strong> Co-pays, prescriptions, groceries, gas cards. We fill the gaps so treatment isn't a choice between health and hunger.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-troh-primary font-bold">→</span>
+                  <span><strong>Essential Needs:</strong> Warm coats for the infusion center. Toiletries for those who've forgotten their own. Dignity in small things.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-troh-primary font-bold">→</span>
+                  <span><strong>Community:</strong> A listening ear at 2 AM. Someone who answers the phone and doesn't rush you. Connection that heals.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -104,25 +129,15 @@ function CloudVillage() {
         </div>
       </section>
 
-      {/* Featured Quote - Light Theme */}
-      <section className="py-24 bg-troh-secondary/20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <blockquote className="text-2xl md:text-3xl italic leading-relaxed text-troh-dark">
-            "Hope is being able to see that there is light despite all of the darkness."
-          </blockquote>
-          <footer className="text-troh-primary mt-4 text-lg font-semibold">— Desmond Tutu</footer>
-        </div>
-      </section>
-
       {/* Shop for Reparations - Coral Background */}
       <section className="py-24 bg-troh-primary text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Support Through Our Shop</h2>
           <p className="text-xl leading-relaxed mb-8">
-            Every purchase from the {siteSettings.title} store directly supports our mission. Your support helps provide reparations and assistance to families facing life-changing diagnoses—covering co-pays, transportation, food, and basic necessities that insurance doesn't reach.
+            Every purchase directly supports families facing life-changing diagnoses—covering co-pays, transportation, food, and basic necessities that insurance doesn't reach.
           </p>
           <p className="text-lg opacity-90 mb-8">
-            Shop with purpose. 100% of proceeds go toward helping real families in our community. Thank you for joining the battle—your support brings hope, dignity, and tangible relief to those who need it most.
+            100% of proceeds go toward helping real families in our community.
           </p>
           <a
             href={`https://${import.meta.env.VITE_SHOPIFY_STORE_DOMAIN}`}
