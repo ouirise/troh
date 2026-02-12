@@ -39,6 +39,7 @@ function Header() {
             <div>
               {/* <h1 className="text-xl font-bold text-white tracking-tight">TroH</h1> */}
               <h1 className="text-xl text-troh-dark hidden font-bold sm:block">Tayloring Rays of Hope</h1>
+              <span className="text-xl sm:hidden">☁️✨</span>
             </div>
           </Link>
 

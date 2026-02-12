@@ -68,7 +68,7 @@ function Footer() {
               &copy; {new Date().getFullYear()} Tayloring Rays of Hope. 501(c)(3) Nonprofit.
             </p>
             <p className="text-xs text-gray-500 mt-1">Founded by Elaine Taylor • EIN Available Upon Request</p>
-            <p className="text-xs text-troh-primary/60 mt-1">Made with love for Mrs. Taylor 💜</p>
+            <p className="text-xs text-troh-primary/60 mt-1">Made with love for Mrs. Taylor, from the Cloud Village 🙏🏽</p>
           </div>
           <div className="md:text-right">
             <p className="text-xs text-gray-400">
