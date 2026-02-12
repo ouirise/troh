@@ -32,7 +32,7 @@ function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-troh-dark mb-4">All Journey</h1>
           <p className="text-xl text-gray-500 max-w-2xl mx-auto">
-            Real journeys from our community. Hope, healing, and everything in between.
+            Real journeys from our community. Hope, healing, and everything in between. 
           </p>
         </div>
       </section>

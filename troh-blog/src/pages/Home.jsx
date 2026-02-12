@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ArrowRight, Heart, Sun, Sparkles } from 'lucide-react'
 import { getAllPosts } from '../lib/content.js'
 import siteSettings from '../content/settings/site.json'
+import ImageCarousel from '../components/ImageCarousel'
 
 function CloudVillage() {
   const [featuredPosts, setFeaturedPosts] = useState([])
@@ -82,6 +83,9 @@ function CloudVillage() {
           </p>
         </div>
       </section>
+
+      {/* Image Gallery & Carousel */}
+      <ImageCarousel />
 
       {/* Impact Numbers - Light Background */}
       <section className="py-16 bg-gradient-to-r from-orange-50 to-green-50">
