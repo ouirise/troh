@@ -3,10 +3,10 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 const images = [
   // { src: '/images/uploads/IMG_20260208_094749.jpg', alt: 'Gallery Image 1' },
-  { src: '/images/uploads/IMG_20260208_094756.png', alt: 'Gallery Image 2' },
+  // { src: '/images/uploads/IMG_20260208_094756.png', alt: 'Gallery Image 2' },
   { src: '/images/uploads/IMG_20260208_094805.jpg', alt: 'Gallery Image 3' },
   // { src: '/images/uploads/IMG_20260208_094812.png', alt: 'Gallery Image 4' },
-  { src: '/images/uploads/IMG_20260208_094815.jpg', alt: 'Gallery Image 5' },
+  // { src: '/images/uploads/IMG_20260208_094815.jpg', alt: 'Gallery Image 5' },
   { src: '/images/uploads/IMG_20260208_094821.jpg', alt: 'Gallery Image 6' },
   { src: '/images/uploads/IMG_20260208_094825.jpg', alt: 'Gallery Image 7' },
   { src: '/images/uploads/IMG_20260208_094830.jpg', alt: 'Gallery Image 8' },

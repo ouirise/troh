@@ -2,15 +2,19 @@
   "title": "Tayloring Rays of Hope",
   "description": "A light in the darkness for those facing life-changing diagnoses. Founded by Elaine Taylor - 501(c)(3) Nonprofit.",
   "stats": [
-    {
-      "number": "4",
-      "label": "Families Pledged to Help",
-      "sublabel": "Support on June 27, 2026"
-    },
+    
     {
       "number": "501(c)(3)",
-      "label": "Nonprofit Status",
+      "label": "Nonprofit Organization",
       "sublabel": "EIN Available Upon Request"
+    }
+    
+  ],
+  "archive": [
+    {
+      "number": "4",
+      "label": "Financial Assistance Requests",
+      "sublabel": "Since 2/1/2026"
     },
     {
       "number": "∞",
