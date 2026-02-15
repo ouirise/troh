@@ -165,7 +165,7 @@ const faqData = [
 // ============================================
 const pageTitles = {
     'hero': 'TroH | Tayloring Rays of Hope',
-    'about': 'About Us | TroH',
+    'about': 'About | TroH',
     'resources': 'Resource Library | TroH',
     'testimonials': 'Stories of Hope | TroH',
     'community': 'Community Forum | TroH',
