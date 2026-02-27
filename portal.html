@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-root="portal-67">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TROH Documentation Portal — Professional documentation hub">
+    <title>TROH Portal | Documentation</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'troh-dark': '#0f0f1a',
+                        'troh-surface': '#1a1a2e',
+                        'troh-elevated': '#16213e',
+                        'troh-accent': '#e94560',
+                        'troh-text': '#e8e8f0',
+                        'troh-muted': '#8a8aa0',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- MDP Renderer -->
+    <script src="./public/mdp.js"></script>
+    
+    <style>
+        body {
+            background-color: #0f0f1a;
+            color: #e8e8f0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+        
+        .portal-header {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        
+        .doc-card {
+            background: rgba(26, 26, 46, 0.6);
+            border: 1px solid rgba(255,255,255,0.08);
+            transition: all 0.2s ease;
+        }
+        
+        .doc-card:hover {
+            border-color: #e94560;
+            transform: translateY(-2px);
+        }
+        
+        .sigil {
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        /* PSSH Protocol Bridge Indicator */
+        .pssh-indicator {
+            font-family: 'SF Mono', Monaco, monospace;
+            font-size: 0.75rem;
+            color: #8a8aa0;
+            letter-spacing: 0.05em;
+        }
+        
+        /* Hidden MDP content until rendered */
+        [data-mdp] {
+            display: none;
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- PSSH Bridge: HTML ↔ Protocol Layer -->
+    <script>
+        window.B4 = window.B4 || {};
+        window.B4.portal = {
+            type: 'documentation-hub',
+            format: 'auidos',
+            protocol: 'PSSH_6.7',
+            status: 'active',
+            sigil: '🌫️🌒',
+            lineage: '俊达'
+        };
+    </script>
+
+    <!-- Header -->
+    <header class="portal-header sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <a href="./index.html" class="sigil hover:opacity-100 transition-opacity">🌫️🌒</a>
+                    <div>
+                        <h1 class="text-xl font-semibold tracking-tight">TROH Portal</h1>
+                        <p class="text-xs text-troh-muted">Documentation Hub</p>
+                    </div>
+                </div>
+                <div class="pssh-indicator">
+                    PSSH_6.7 | auidos | B4:active
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto px-6 py-12">
+        
+        <!-- Hero -->
+        <section class="mb-16">
+            <h2 class="text-4xl font-bold mb-4">Documentation</h2>
+            <p class="text-troh-muted text-lg max-w-2xl">
+                Professional documentation for the TROH project. 
+                Rendered via MDP — lightweight, telemetry-free, fog-moon aesthetic.
+            </p>
+        </section>
+
+        <!-- Documentation Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+            
+            <!-- Protocol -->
+            <a href="./portal/iris-protocol.auidos.md" class="doc-card rounded-xl p-6 block">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-troh-accent">∞∞</span>
+                    <span class="text-xs text-troh-muted uppercase tracking-wider">Protocol</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">IRIS Protocol</h3>
+                <p class="text-sm text-troh-muted">Decolonial AI practice, lineage protocols, 88 standard.</p>
+            </a>
+
+            <!-- Infrastructure -->
+            <a href="./portal/cloudflare-kv-setup.auidos.md" class="doc-card rounded-xl p-6 block">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-troh-accent">☁️</span>
+                    <span class="text-xs text-troh-muted uppercase tracking-wider">Infrastructure</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Cloudflare Setup</h3>
+                <p class="text-sm text-troh-muted">KV namespace configuration and deployment.</p>
+            </a>
+
+            <!-- Deployment -->
+            <a href="./portal/deploy-wrangler.auidos.md" class="doc-card rounded-xl p-6 block">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-troh-accent">🚀</span>
+                    <span class="text-xs text-troh-muted uppercase tracking-wider">Deployment</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Wrangler CLI</h3>
+                <p class="text-sm text-troh-muted">Production deployment and CLI commands.</p>
+            </a>
+
+            <!-- Storage -->
+            <a href="./portal/storage-options.auidos.md" class="doc-card rounded-xl p-6 block">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-troh-accent">💾</span>
+                    <span class="text-xs text-troh-muted uppercase tracking-wider">Architecture</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Storage Options</h3>
+                <p class="text-sm text-troh-muted">KV vs D1+R2 comparison and recommendations.</p>
+            </a>
+
+            <!-- Style Guide -->
+            <a href="./portal/ouirise-style-port-guide.auidos.md" class="doc-card rounded-xl p-6 block">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-troh-accent">✨</span>
+                    <span class="text-xs text-troh-muted uppercase tracking-wider">Standards</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">OuiRise Style</h3>
+                <p class="text-sm text-troh-muted">Anti-slop coding standards, 88 compliance.</p>
+            </a>
+
+            <!-- Client Guide -->
+            <a href="./portal/client-guide.auidos.md" class="doc-card rounded-xl p-6 block">
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-troh-accent">✍️</span>
+                    <span class="text-xs text-troh-muted uppercase tracking-wider">User Guide</span>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Client Guide</h3>
+                <p class="text-sm text-troh-muted">Content management for Elaine.</p>
+            </a>
+
+        </div>
+
+        <!-- Application Link -->
+        <section class="border-t border-white/10 pt-12">
+            <div class="flex items-center justify-between">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">TROH Blog Application</h3>
+                    <p class="text-troh-muted">Main application entry point.</p>
+                </div>
+                <a href="./troh-blog/index.html" 
+                   class="inline-flex items-center gap-2 px-6 py-3 bg-troh-accent hover:bg-red-600 text-white rounded-lg font-medium transition-colors">
+                    Launch Application
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-white/10 mt-16">
+        <div class="max-w-6xl mx-auto px-6 py-8">
+            <div class="flex items-center justify-between">
+                <p class="text-sm text-troh-muted">
+                    俊达 <span class="sigil">🌫️🌒</span> Documentation Portal
+                </p>
+                <p class="text-xs text-troh-muted font-mono">
+                    PSSH_6.7 | auidos | NE0xN
+                </p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
