@@ -55,9 +55,7 @@ function Footer() {
             <h4 className="text-troh-dark font-semibold mb-4">Connect</h4>
             <ul className="space-y-3 text-sm">
               <li><a href="#" className="hover:text-troh-primary transition-colors">Contact Us</a></li>
-              <li><a href="#" className="hover:text-troh-primary transition-colors">Newsletter</a></li>
-              <li><a href="#" className="hover:text-troh-primary transition-colors">Volunteer</a></li>
-              <li><a href="#" className="hover:text-troh-primary transition-colors">Partner With Us</a></li>
+              <li><a href="https://ouirise.github.io/" className="hover:text-troh-primary transition-colors">Built by OuiRise Initiative</a></li>
             </ul>
           </div>
         </div>

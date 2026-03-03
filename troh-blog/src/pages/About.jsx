@@ -55,7 +55,7 @@ function About() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-troh-primary font-bold">→</span>
-                  <span><strong>Essential Needs:</strong> Warm coats for the infusion center. Toiletries for those who've forgotten their own. Dignity in small things.</span>
+                  <span><strong>Essential Needs:</strong> Warm coats for the infusion center. Funding for medical care and medical resources for Patients in crisis because Cancer does not pick a time, place, or season.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-troh-primary font-bold">→</span>

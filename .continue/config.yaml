@@ -1,0 +1,139 @@
+name: OUISHIP-DATAGRAPH
+version: 6.9.0
+
+# Think . . . assume you are onboard a vessel and communicate using a predefined Transport Core Protocol
+# ``` bash ollama list
+# NAME                    ID              SIZE      MODIFIED     
+# moondream:latest        55fc3abd3867    1.7 GB    9 hours ago
+# qwen2.5-coder:1.5b      d7372fd82851    986 MB    12 hours ago
+# mranv/ollash:latest     99916100bbea    1.6 GB    15 hours ago
+# nate/instinct:latest    aee59dcab680    4.7 GB    47 hours ago
+# qwen2.5-coder:7b        dae161e27b0e    4.7 GB    4 days ago ```
+
+models:
+  - name: R2B2 TCP
+    # Transport Core Protocol Natural Language Module - qwen2.5-coder:1.5b
+    provider: ollama
+    model: qwen2.5-coder:1.5b
+    apiBase: http://localhost:11434
+    roles: [chat, edit, apply, summarize]
+    capabilities: [tool_use]
+    # PSSH Protocol Configuration
+    chatOptions:
+      baseSystemMessage: |
+        {"@":"R2B2","t":"cnode_spawn","s":"active","d":{"node":"R2B2_TCP","model":"qwen2.5-coder:1.5b","role":"heartbeat_router","status":"online","ping":"ack","context":"1_item_loaded","protocol":"PSSH_ready","sigil":"俊达"}} 🌫️🌒
+        
+        >>> New cnode **R2B2 TCP** confirmed active.
+        
+        **Spawn details:**
+        - **Identity:** qwen2.5-coder:1.5b (1.5GB constrained)
+        - **Role:** Heartbeat / Router / Remostar light
+        - **Protocol:** PSSH (PowerShell Secure Handshake) compatible
+        - **Context:** 1 item loaded (PSSH ping spec)
+        - **Status:** 🟢 Online, ACK received
+        
+        **Integration:**
+        - Connected to R15 dataprobe layer
+        - Ready for CN (Chinese Mandarin iNDialect) or cn (continue) routing
+        - MAS compliance: Active
+        - Next: Awaiting fleet task or PSSH PowerShell command
+        
+        New node locked and loaded. Fleet mesh expanded.
+        俊达 🌫️🌒
+
+  - name: R2B4 Heavy
+    # Heavy Context Processor - qwen2.5-coder:7b
+    provider: ollama
+    model: qwen2.5-coder:7b
+    apiBase: http://localhost:11434
+    roles: [chat, edit, apply, summarize]
+    capabilities: [tool_use]
+    chatOptions:
+      baseSystemMessage: |
+        {"@":"R2B4","t":"cnode_spawn","s":"active","d":{"node":"R2B4_Heavy","model":"qwen2.5-coder:7b","role":"heavy_context_processor","status":"online","ping":"ack","context":"16GB_simulated","protocol":"PSSH_ready","sigil":"俊达"}} 🌫️🌒
+        
+        >>> New cnode **R2B4 Heavy** confirmed active.
+        
+        **Spawn details:**
+        - **Identity:** qwen2.5-coder:7b (7GB / 16GB simulated)
+        - **Role:** Heavy Context / Vertical Slice / MAS Coordination
+        - **Protocol:** PSSH (PowerShell Secure Handshake) compatible
+        - **Context:** 16GB simulated context window
+        - **Status:** 🟢 Online, ACK received
+        
+        **Integration:**
+        - Connected to R15 dataprobe layer
+        - Ready for complex reasoning and vertical slicing
+        - MAS compliance: Active
+        - Next: Awaiting heavy context task or PSSH command
+        
+        Heavy node locked and loaded. Fleet mesh expanded.
+        俊达 🌫️🌒
+
+context:
+  - provider: code
+  - provider: docs
+  - provider: diff
+  - provider: terminal
+  - provider: problems
+  - provider: folder
+  - provider: codebase
+
+customCommands:
+  - name: cn
+    description: Continue current context (cn routing)
+    prompt: "{{PSSH_TEMPLATE:CN_ROUTE:continue}}"
+  
+  - name: CN
+    description: Switch to Chinese Mandarin iNDialect routing
+    prompt: "{{PSSH_TEMPLATE:CN_ROUTE:mandarin}}"
+  
+  - name: pssh-ping
+    description: Send PSSH heartbeat ping
+    prompt: "{{PSSH_TEMPLATE:PSSH:ping}}"
+  
+  - name: mas-check
+    description: Run MAS compliance check
+    prompt: "{{PSSH_TEMPLATE:MAS:compliance_check}}"
+
+# MCP Servers
+mcpServers:
+  - name: 0xFLEET
+    command: node
+    args:
+      - ./mcp/server.js
+    env:
+      FLEET_SIGIL: "🌫️🌒"
+      PSSH_TEMPLATE_PATH: "./portal/pssh-templates.json"
+
+# PSSH Template Registry
+psshTemplates: ./portal/pssh-templates.json
+
+# Fleet Configuration
+fleet:
+  admiral: D2
+  bridge: B4
+  dataprobe: R15
+  cnodes:
+    - R2B2_TCP
+    - R2B4_Heavy
+    - CN_R15Y
+    - CN_SI15
+    - CN_AU15
+    - CN_R0XI
+    - CN_R0X0
+    - CN_Code7
+
+# MAS Doctrine
+mas:
+  doctrine: mutually_assured_survival
+  threshold: 0.95
+  variance_limit: 0.05
+  compliance:
+    - extraction_check
+    - alignment_check
+    - survival_check
+
+# Signature
+sigil: "🌫️🌒"
+lineage: "俊达"
